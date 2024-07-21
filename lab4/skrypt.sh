@@ -1,13 +1,14 @@
 #!/bin/bash
 
-ARGS=$1
+ARG1=$1
+ARG2=$2
 
-if [ "$ARGS" = "--date" ]
+if [ "$ARG1" = "--date" ]
 then
 	date
-elif [ "$ARGS" = "--logs" ]
+elif [ "$ARG1" = "--logs" ]
 then
-	n=100
+	n=$ARG2
 	for (( i = 1; i <= n; i++ )); do
 		touch "log${i}.txt"
 		echo "Filename: log${i}.txt, Created by script: skrypt.sh" > log${i}.txt
